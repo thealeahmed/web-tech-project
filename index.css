@@ -1,0 +1,349 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Top Bar Styles */
+.top-bar {
+  border-bottom: 1px solid #dee2e6;
+  padding-top: 0.35rem; /* Adjusted for compactness */
+  padding-bottom: 0.35rem; /* Adjusted for compactness */
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.top-bar-contact, .top-bar-social {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+.top-bar-contact h4 {
+  margin-bottom: 0;
+  font-size: 0.9rem; /* Slightly smaller font size */
+  color: #555; /* Adjusted color */
+}
+
+.top-bar-contact a {
+  text-decoration: none;
+  color: #888; /* Adjusted to a lighter grey */
+  font-size: 0.9rem; /* Consistent with h4 */
+}
+
+.top-bar-contact a:hover {
+  color: #e49a5a;
+}
+
+.top-bar-social a {
+  color: #aaa; /* Adjusted to a lighter grey */
+  font-size: 1.1rem; /* Slightly smaller social icon size */
+  transition: color 0.3s ease;
+}
+
+.top-bar-social a:hover {
+  color: #e49a5a;
+}
+
+/* Custom CSS for Gallery Image Hover Effect */
+.gallery-img {
+  transition: all 0.3s ease-in-out;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Logo Styles */
+.logo-section {
+  text-align: center;
+  margin-top: 2.5rem; /* Adjusted for more spacing */
+  margin-bottom: 2.5rem; /* Adjusted for more spacing */
+}
+
+/* Navigation Styles */
+.main-nav {
+  background-color: #fff;
+  border-bottom: 1px solid #eee; /* Lighter border */
+  padding-top: 0.75rem; /* Adjusted padding */
+  padding-bottom: 0.75rem; /* Adjusted padding */
+}
+
+.main-nav .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.2rem; /* Slightly increased gap for spacing */
+}
+
+.main-nav-list .nav-item .nav-link {
+  color: #555; /* Default link color - slightly darker */
+  text-decoration: none;
+  padding: 0.5rem 0.8rem; /* Adjusted padding */
+  font-weight: 500; /* Medium font weight */
+  text-transform: uppercase; /* Uppercase text */
+  font-size: 0.9rem; /* Slightly smaller font size */
+}
+
+.main-nav-list .nav-item .nav-link:hover {
+  color: #e49a5a; /* Hover color */
+}
+
+
+
+/* Highlight Bar Styles */
+.highlight-bar {
+  background-color: #f7f7fa;
+  border-bottom: 1px solid #ddd;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.highlight-heading {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 2rem;
+  color: #222;
+}
+
+/* Offer Section Styles (Handmade Fashion For You) */
+.offer-section {
+  border-top: 1px solid #eee;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f8f8f8; /* Light gray background */
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.offer-section .row {
+  align-items: center;
+}
+
+.offer-image-col img {
+  width: 100%;
+  object-fit: cover;
+  min-height: 450px;
+}
+
+.offer-content-col {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.offer-heading {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  color: #222;
+}
+
+.offer-paragraph {
+  margin-bottom: 1rem;
+  color: #6c757d; /* text-secondary */
+  font-size: 1.1rem;
+}
+
+.offer-subheading {
+  margin-bottom: 1.5rem;
+  color: #999;
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.feature-grid .row {
+  gap: 1.5rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.feature-icon {
+  height: 48px;
+}
+
+.feature-title {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.feature-description {
+  color: #6c757d; /* text-secondary */
+  font-size: 0.875rem; /* small */
+}
+
+/* Gallery Section Styles */
+.gallery-section {
+  background-color: #f8f8f8;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.gallery-section .row {
+  align-items: center;
+}
+
+.gallery-text-col {
+  padding-right: 3rem;
+}
+
+.gallery-heading {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: #222;
+}
+
+.gallery-paragraph {
+  margin-bottom: 1rem;
+  color: #6c757d; /* text-secondary */
+  font-size: 0.875rem; /* small */
+}
+
+.gallery-button {
+  background-color: #e49a5a;
+  border-color: #e49a5a;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  border-radius: 0.3rem;
+  display: inline-block;
+}
+
+.gallery-image-grid .row {
+  gap: 0.75rem; /* Equivalent to Bootstrap's g-3 */
+}
+
+.gallery-image-item img {
+  width: 100%;
+  border-radius: 0.25rem;
+}
+
+/* Contact Section Styles */
+.contact-section {
+  background-color: #f7f7fa;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.contact-card {
+  border: 2px solid #e49a5a;
+  padding: 3rem;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-heading {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  color: #222;
+}
+
+.contact-button {
+  background-color: #e49a5a;
+  border-color: #e49a5a;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  border-radius: 0.3rem;
+  display: inline-block;
+}
+
+/* Footer Styles */
+.site-footer {
+  background-color: #fff;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  margin-top: 3rem;
+  border-top: 1px solid #eee;
+}
+
+.footer-column-heading {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-text {
+  color: #6c757d; /* text-muted */
+  font-size: 0.875rem; /* small */
+}
+
+.footer-link-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-link-item {
+  margin-bottom: 0.5rem;
+}
+
+.footer-link-item a {
+  color: #6c757d; /* text-muted */
+  text-decoration: none;
+  font-size: 0.875rem; /* small */
+}
+
+.footer-address-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.footer-pin-icon {
+  height: 24px;
+}
+
+.footer-copyright {
+  color: #6c757d; /* text-muted */
+  margin-bottom: 1rem;
+  display: block;
+  font-size: 0.875rem; /* small */
+}
+
+.footer-social-icons {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+.footer-social-icons a {
+  color: #6c757d; /* text-secondary */
+  font-size: 1.25rem; /* fs-5 */
+}
