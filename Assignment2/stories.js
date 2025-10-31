@@ -94,8 +94,8 @@ function handleFormSubmission(event) {
       timeout: 10000,
       success: function (response) {
         console.log("Update successful:", response);
-        displayStories(); // Refresh the list after updating a story
-        // Clear form after successful update
+        displayStories(); 
+        
         $("#clearBtn").hide();
         $("#createBtn").removeAttr("data-id");
         $("#createBtn").html("Create");
@@ -123,8 +123,8 @@ function handleFormSubmission(event) {
       timeout: 10000,
       success: function (response) {
         console.log("Create successful:", response);
-        displayStories(); // Refresh the list after creating a new story
-        // Clear form after successful creation
+        displayStories();
+        
         $("#createTitle").val("");
         $("#createContent").val("");
         alert("Story created successfully!");
