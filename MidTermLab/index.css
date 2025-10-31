@@ -297,8 +297,8 @@ body {
 }
 
 .footer-text {
-  color: #6c757d; /* text-muted */
-  font-size: 0.875rem; /* small */
+  color: #6c757d; 
+  font-size: 0.875rem; 
 }
 
 .footer-link-list {
@@ -312,9 +312,9 @@ body {
 }
 
 .footer-link-item a {
-  color: #6c757d; /* text-muted */
+  color: #6c757d; 
   text-decoration: none;
-  font-size: 0.875rem; /* small */
+  font-size: 0.875rem; 
 }
 
 .footer-address-block {
@@ -328,10 +328,10 @@ body {
 }
 
 .footer-copyright {
-  color: #6c757d; /* text-muted */
+  color: #6c757d;
   margin-bottom: 1rem;
   display: block;
-  font-size: 0.875rem; /* small */
+  font-size: 0.875rem; 
 }
 
 .footer-social-icons {
@@ -344,6 +344,182 @@ body {
 }
 
 .footer-social-icons a {
-  color: #6c757d; /* text-secondary */
-  font-size: 1.25rem; /* fs-5 */
+  color: #6c757d; 
+  font-size: 1.25rem; 
+}
+
+
+.stories-section {
+  background-color: #f8f8f8;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.stories-heading {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 2rem;
+}
+
+.stories-section .card {
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.stories-section .card-header {
+  background-color: #e49a5a;
+  color: white;
+  border-radius: 0.5rem 0.5rem 0 0 !important;
+  border: none;
+  padding: 1rem 1.5rem;
+}
+
+.stories-section .card-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.stories-section .form-control {
+  border: 1px solid #ddd;
+  border-radius: 0.3rem;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.stories-section .form-control:focus {
+  border-color: #e49a5a;
+  box-shadow: 0 0 0 0.2rem rgba(228, 154, 90, 0.25);
+}
+
+.stories-section .btn-primary {
+  background-color: #e49a5a;
+  border-color: #e49a5a;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+}
+
+.stories-section .btn-primary:hover {
+  background-color: #d18a4a;
+  border-color: #d18a4a;
+}
+
+.stories-section .btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+}
+
+.stories-section .btn-info {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.stories-section .btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.stories-section .btn-info:hover {
+  background-color: #138496;
+  border-color: #117a8b;
+}
+
+.stories-section .btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+#storiesList h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+#storiesList div:not(.mb-3) {
+  color: #6c757d;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+#storiesList hr {
+  margin: 1.5rem 0;
+  border-color: #ddd;
+}
+
+/* CV Section */
+.cv-section {
+  background-color: #f8f8f8;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .cv-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.cv-item {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.cv-item:hover {
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.cv-title {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: #fff;
+  color: #222;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  position: relative;
+}
+
+.cv-title::after {
+  content: "Hover to show";
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #e49a5a;
+  font-size: 0.85rem;
+}
+
+.cv-details {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: max-height 0.5s ease, opacity 0.3s ease, transform 0.3s ease;
+  padding: 0 1.25rem;
+}
+
+.cv-item:hover .cv-details {
+  max-height: 1000px; /* sufficiently large to show content */
+  opacity: 1;
+  transform: translateY(0);
+  padding-bottom: 1.25rem;
 }

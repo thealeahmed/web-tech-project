@@ -9,6 +9,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
@@ -47,6 +48,7 @@
             <li class="nav-item"><a class="nav-link" href="#about">About us</a></li>
             <li class="nav-item"><a class="nav-link" href="#offer">Offer</a></li>
             <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#stories">Stories</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             <li class="nav-item"><a class="nav-link" href="#buy">Buy now</a></li>
           </ul>
@@ -56,6 +58,10 @@
 
     <section id="home" class="container my-5">
       <div class="row g-4 align-items-stretch">
+   
+        <div class="col-12 mb-3 text-end">
+          <a href="checkout.html" class="btn btn-primary">Go to Checkout</a>
+        </div>
         <div class="col-lg-7 position-relative">
           <img src="imgi_72_home_handmade_slider.jpg" alt="Gilian Lee" class="img-fluid w-100 h-100 rounded" style="object-fit: cover;">
           <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-start text-white p-5" style="background:rgba(0,0,0,0.3);">
@@ -172,7 +178,10 @@
     <section id="contact" class="container-fluid contact-section">
       <div class="container contact-card">
         <h2 class="contact-heading">Want to have your own unique little thing?</h2>
-        <a href="#buy" class="contact-button">Contact and order</a>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="#buy" class="contact-button">Contact and order</a>
+          <a href="stories.html" class="contact-button" style="background-color: #28a745; border-color: #28a745;">Share Your Story</a>
+        </div>
       </div>
     </section>
 
@@ -233,5 +242,9 @@
         </div>
       </div>
     </footer>
+
   </body>
 </html>
+
+
+
