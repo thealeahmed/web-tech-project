@@ -14,6 +14,7 @@ var session = require("express-session");
 var app = express();
 
 var bodyParser = require("body-parser");
+var adminRouter = require("./routes/admin");
 
 app.use(bodyParser.json());
 // for parsing application/xwww-
@@ -51,8 +52,11 @@ app.use("/api/public/products", require("./routes/api/public/products"));
 app.use("/api/categories", require("./routes/api/catagories"));
 app.use("/api/products", apiauth, require("./routes/api/products"));
 app.use("/api/auth", require("./routes/api/auth"));
+app.use("/admin", adminRouter);
 app.use("/", sessionAuth, indexRouter);
 app.use("/my-account", sessionAuth, checkSessionAuth, protectedRouter);
+app.use("/stories", sessionAuth, require("./routes/stories"));
+app.use("/checkout", sessionAuth, require("./routes/checkout"));
 app.use("/", sessionAuth, require("./routes/shop"));
 app.get("/admin", async (req, res) => {
   res.sendFile(path.join(__dirname, "admin", "build", "index.html"));

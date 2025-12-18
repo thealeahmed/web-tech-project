@@ -8,17 +8,29 @@
 
     </thead>
     <tbody>
-        <% for(var i=0;i<products.length;i++) {let product = products[i];%>
+        <% for(var i=0;i<products.length;i++) {let product=products[i];%>
             <tr>
-                <td><%=product.name  %> </td>
-                <td><%=product.price  %> </td>
+                <td>
+                    <%=product.name %>
+                </td>
+                <td>
+                    <%=product.price %>
+                </td>
             </tr>
-            <% } %> 
-            <tfoot>
-                <tr>
-                    <td>Total:</td>
-                    <td><%=total  %> </td>
-                </tr>
-            </tfoot>
+            <% } %>
+    <tfoot>
+        <tr>
+            <td>Total:</td>
+            <td>
+                <%=total %>
+            </td>
+        </tr>
+    </tfoot>
     </tbody>
 </table>
+
+<% if (products.length> 0) { %>
+    <div class="text-end mt-3">
+        <a href="/checkout" class="btn btn-success btn-lg">Proceed to Checkout</a>
+    </div>
+    <% } %>

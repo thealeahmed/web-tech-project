@@ -1,0 +1,119 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f7f7fa;
+}
+
+.page-body {
+  min-height: 70vh;
+  background: #fff;
+}
+
+.top-bar {
+  border-bottom: 1px solid #dee2e6;
+  padding: 0.4rem 0;
+  background-color: #fff;
+}
+
+.main-nav {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.main-nav .navbar-brand {
+  color: #222;
+}
+
+.main-nav-list .nav-link {
+  color: #555;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.main-nav-list .nav-link:hover,
+.main-nav-list .nav-link.active {
+  color: #e49a5a;
+}
+
+.page-hero {
+  background: linear-gradient(120deg, #fff7ef, #f8f8f8);
+  border-bottom: 1px solid #eee;
+}
+
+.filter-card {
+  border: 1px solid #eee;
+  background: #fffaf5;
+}
+
+.product-card {
+  border: 1px solid #eee;
+}
+
+.product-img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.placeholder-img {
+  height: 220px;
+  background: #f2f2f2;
+}
+
+.site-footer {
+  border-top: 1px solid #eee;
+  padding: 1.5rem 0;
+  background: #fff;
+}
+
+.stories-section {
+  background-color: #f8f8f8;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.stories-heading {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 2rem;
+}
+
+.stories-section .card {
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.stories-section .card-header {
+  background-color: #e49a5a;
+  color: white;
+  border-radius: 0.5rem 0.5rem 0 0 !important;
+  border: none;
+  padding: 1rem 1.5rem;
+}
+
+.stories-section .card-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.stories-section .form-control {
+  border: 1px solid #ddd;
+  border-radius: 0.3rem;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.stories-section .btn-primary {
+  background-color: #e49a5a;
+  border-color: #e49a5a;
+}
+
+.stories-section .btn-primary:hover {
+  background-color: #d18a4a;
+  border-color: #d18a4a;
+}
+

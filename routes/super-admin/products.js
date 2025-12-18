@@ -23,14 +23,15 @@ router.get("/products/create", (req, res) => {
 // POST - handle form submission
 router.post("/products/create", upload.single("image"), async (req, res) => {
   try {
-    const { name, price, color, department, description } = req.body;
+    const { name, price, category, description, stock, tags } = req.body;
     const image = req.file ? req.file.filename : null;
 
     const newProduct = new Product({
       name,
-      price,
-      color,
-      department,
+      price: Number(price),
+      category,
+      stock: Number(stock || 0),
+      tags: tags ? tags.split(",").map((t) => t.trim()) : [],
       description,
       image,
     });
@@ -66,8 +67,15 @@ router.get("/products/edit/:id", async (req, res) => {
 // POST - update product
 router.post("/products/edit/:id", upload.single("image"), async (req, res) => {
   try {
-    const { name, price, color, department, description } = req.body;
-    const updateData = { name, price, color, department, description };
+    const { name, price, category, description, stock, tags } = req.body;
+    const updateData = {
+      name,
+      price: Number(price),
+      category,
+      stock: Number(stock || 0),
+      description,
+      tags: tags ? tags.split(",").map((t) => t.trim()) : [],
+    };
 
     if (req.file) {
       updateData.image = req.file.filename;

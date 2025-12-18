@@ -3,7 +3,7 @@ var router = express.Router();
 var Product = require("../models/Product");
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
-/* GET home page. */
+
 router.get("/login", function (req, res, next) {
   return res.render("site/login");
 });
