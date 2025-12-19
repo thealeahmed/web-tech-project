@@ -1,0 +1,543 @@
+body {
+  font-family: 'Lato', Arial, sans-serif;
+  /* Use Lato if available or fallback */
+  margin: 0;
+  color: #626262;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1e1e1e;
+  font-weight: 400;
+}
+
+.btn-theme-orange {
+  background-color: #e49a5a;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  transition: background-color 0.3s;
+  border: none;
+}
+
+.btn-theme-orange:hover {
+  background-color: #d18a4a;
+  color: #fff;
+}
+
+/* --- Top Bar --- */
+.top-bar {
+  background-color: #f7f7f7;
+  /* Light grey top bar */
+  border-bottom: 1px solid #e1e1e1;
+  padding: 10px 0;
+  font-size: 13px;
+  color: #939393;
+}
+
+.top-bar a {
+  color: #939393;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.top-bar a:hover {
+  color: #e49a5a;
+  /* Theme accent color */
+}
+
+.top-bar-contact,
+.top-bar-social {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* --- Logo Section --- */
+.logo-section {
+  padding: 40px 0;
+  text-align: center;
+  background-color: #fcfcfc;
+}
+
+/* --- Navigation --- */
+.main-nav {
+  background-color: #fff;
+  padding: 0;
+  border-bottom: 1px solid #e1e1e1;
+  border-top: 1px solid #e1e1e1;
+}
+
+.main-nav .container {
+  justify-content: center;
+}
+
+.main-nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+.main-nav-list li a {
+  display: block;
+  padding: 20px 0;
+  color: #626262;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.main-nav-list li a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #e5a05b;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+}
+
+.main-nav-list li a:hover {
+  color: #1e1e1e;
+}
+
+.main-nav-list li a:hover:after {
+  width: 100%;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  background: #f8f8f8;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-left {
+  position: relative;
+  background-size: cover !important;
+  /* Ensure cover */
+  background-position: center left !important;
+  /* Align to left to show content */
+}
+
+/* Green Badge "Now 3x Faster" */
+.badge-be-green {
+  background-color: #00cca3;
+  /* Bright green from screenshot */
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 25px;
+  border-radius: 30px;
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  /* Adjust based on image text */
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.badge-be-green i {
+  margin-right: 8px;
+}
+
+.hero-text-content {
+  z-index: 2;
+  position: relative;
+  max-width: 500px;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-small-title {
+  font-family: 'Droid Serif', serif;
+  font-style: italic;
+  color: #929292;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 60px;
+  line-height: 60px;
+  color: #272727;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.btn-theme {
+  background-color: #4a545d;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  transition: background-color 0.3s;
+  border: none;
+}
+
+.btn-theme:hover {
+  background-color: #e5a05b;
+  color: #fff;
+}
+
+/* --- Feature Grid (Unique little thing) --- */
+.features-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.section-title-wrapper {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 30px;
+  color: #3b3b3b;
+  margin-bottom: 15px;
+  line-height: 40px;
+}
+
+.section-subtitle {
+  font-family: 'Droid Serif', serif;
+  font-style: italic;
+  color: #999;
+  font-size: 16px;
+}
+
+.feature-box {
+  text-align: center;
+  padding: 20px;
+}
+
+.feature-icon {
+  font-size: 40px;
+  color: #d1d1d1;
+  /* Light grey icons initially */
+  margin-bottom: 25px;
+  transition: color 0.3s;
+}
+
+.feature-box:hover .feature-icon {
+  color: #e5a05b;
+}
+
+.feature-title {
+  font-size: 18px;
+  color: #383838;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.feature-desc {
+  color: #8c8c8c;
+  font-size: 14px;
+}
+
+/* --- Products / Shop Area --- */
+.product-showcase {
+  background: #fff;
+  padding-bottom: 80px;
+}
+
+.product-card {
+  border: 1px solid #eaeaea;
+  transition: box-shadow 0.3s;
+  margin-bottom: 30px;
+}
+
+.product-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.product-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: #f9f9f9;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-img-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+}
+
+.product-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+  text-decoration: none;
+}
+
+.product-price {
+  color: #e5a05b;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* --- Banner Split Section --- */
+.banner-split {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.banner-col {
+  flex: 1;
+  min-width: 300px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.banner-text-col {
+  background: #f2f2f2;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.banner-heading {
+  font-size: 42px;
+  color: #333;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+/* --- Footer --- */
+.main-footer {
+  background-color: #1a1a1a;
+  /* Dark footer */
+  color: #a8a8a8;
+  padding: 70px 0 20px;
+  font-size: 13px;
+}
+
+.footer-widget h5 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #333;
+}
+
+.footer-links li a {
+  color: #a8a8a8;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+  color: #e5a05b;
+}
+
+.footer-address p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+.copyright-bar {
+  background: #111;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.copyright-text {
+  color: #666;
+}
+
+/* --- CV / Original Sections Adaptation --- */
+.cv-section {
+  padding: 60px 0;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+.gallery-heading {
+  text-align: center;
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.cv-item {
+  border: 1px solid #eee;
+  background: #fff;
+}
+
+.cv-title {
+  background: #f9f9f9;
+  padding: 15px 20px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.cv-details {
+  padding: 20px;
+}
+
+/* --- Stories --- */
+.stories-section {
+  padding: 60px 0;
+  background: #fbfbfb;
+}
+
+/* --- About Us Page --- */
+.about-banner {
+  background-color: #2f3440;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 60px;
+  background: url('/images/imgi_75_header.png') no-repeat center center/cover;
+  /* Reusing header bg or similar dark bg */
+  position: relative;
+}
+
+.about-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(47, 52, 64, 0.9);
+  /* Overlay to match dark grey look */
+}
+
+.about-banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.about-banner h1 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+  background-color: transparent;
+  /* No box in this design */
+  display: inline-block;
+  padding: 10px 30px;
+  text-transform: capitalize;
+}
+
+.drop-cap {
+  float: left;
+  font-size: 50px;
+  line-height: 50px;
+  background-color: #e49a5a;
+  color: #fff;
+  padding: 10px 15px;
+  margin-right: 15px;
+  font-weight: 700;
+  border-radius: 2px;
+}
+
+.about-heading {
+  font-size: 30px;
+  color: #444;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: justify;
+  line-height: 1.4;
+  color: #555;
+  margin-top: 40px;
+}
+
+.orange-text {
+  color: #e49a5a;
+}
+
+/* Progress Bars */
+.progress-container {
+  margin-bottom: 20px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #777;
+  font-size: 13px;
+}
+
+.theme-progress {
+  height: 10px;
+  background-color: #f1f1f1;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.theme-progress-bar {
+  height: 100%;
+  background-color: #e49a5a;
+}

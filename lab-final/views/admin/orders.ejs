@@ -1,0 +1,70 @@
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Admin Orders Dashboard</h2>
+        <a href="/products" class="btn btn-outline-primary">Back to Shop</a>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer Name</th>
+                            <th>Total Amount</th>
+                            <th>Status</th>
+                            <th>Order Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if (orders && orders.length> 0) { %>
+                            <% orders.forEach(order=> { %>
+                                <tr>
+                                    <td><small class="text-muted">
+                                            <%= order._id %>
+                                        </small></td>
+                                    <td>
+                                        <%= order.customerName %>
+                                    </td>
+                                    <td>Rs <%= order.totalAmount %>
+                                    </td>
+                                    <td>
+                                        <span
+                                            class="badge rounded-pill bg-<%= order.status === 'Confirmed' ? 'success' : (order.status === 'Cancelled' ? 'danger' : 'warning text-dark') %>">
+                                            <%= order.status %>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <%= new Date(order.createdAt).toLocaleDateString() %>
+                                    </td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm">
+                                            <form action="/admin/orders/<%= order._id %>/status" method="POST"
+                                                class="d-inline">
+                                                <input type="hidden" name="status" value="Confirmed">
+                                                <button type="submit" class="btn btn-outline-success" <%=order.status
+                                                    !=='Pending' ? 'disabled' : '' %>>Confirm</button>
+                                            </form>
+                                            <form action="/admin/orders/<%= order._id %>/status" method="POST"
+                                                class="d-inline ms-1">
+                                                <input type="hidden" name="status" value="Cancelled">
+                                                <button type="submit" class="btn btn-outline-danger" <%=order.status
+                                                    !=='Pending' ? 'disabled' : '' %>>Cancel</button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                                    <% } else { %>
+                                        <tr>
+                                            <td colspan="6" class="text-center py-4">No orders found.</td>
+                                        </tr>
+                                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+<section class="page-hero">
+  <div class="container text-center py-5">
+    <h1 class="display-5 mb-2">
+      <%= typeof pagetitle !="undefined" ? pagetitle : "Shop Products" %>
+    </h1>
+    <p class="lead text-muted">Browse products pulled dynamically from MongoDB.</p>
+  </div>
+</section>
+
+<section class="container my-4">
+  <form class="card card-body mb-4 filter-card" method="get" action="/products">
+    <div class="row g-3 align-items-end">
+      <div class="col-md-3">
+        <label class="form-label" for="search">Search</label>
+        <input class="form-control" id="search" name="search" placeholder="Name or description"
+          value="<%= filters.search %>">
+      </div>
+      <div class="col-md-3">
+        <label class="form-label" for="category">Category</label>
+        <select class="form-select" id="category" name="category">
+          <option value="">All categories</option>
+          <% categories.forEach(function(cat){ %>
+            <option value="<%= cat %>" <%=filters.category===cat ? "selected" : "" %>><%= cat %>
+            </option>
+            <% }); %>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label class="form-label" for="minPrice">Min price</label>
+        <input class="form-control" type="number" min="0" step="1" id="minPrice" name="minPrice"
+          value="<%= filters.minPrice %>">
+      </div>
+      <div class="col-md-2">
+        <label class="form-label" for="maxPrice">Max price</label>
+        <input class="form-control" type="number" min="0" step="1" id="maxPrice" name="maxPrice"
+          value="<%= filters.maxPrice %>">
+      </div>
+      <div class="col-md-2 d-flex gap-2">
+        <button class="btn btn-primary flex-grow-1" type="submit">Apply</button>
+        <a class="btn btn-outline-secondary" href="/products">Reset</a>
+      </div>
+    </div>
+  </form>
+
+  <div class="row g-4">
+    <% if(!products.length){ %>
+      <div class="col-12">
+        <div class="alert alert-warning mb-0">No products match your filters.</div>
+      </div>
+      <% } %>
+        <% products.forEach(function(product){ %>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm product-card">
+              <% if (product.image) { %>
+                <img src="/images/uploaded/<%= product.image %>" class="card-img-top product-img"
+                  alt="<%= product.name %>">
+                <% } else { %>
+                  <div class="placeholder-img card-img-top d-flex align-items-center justify-content-center text-muted">
+                    No image</div>
+                  <% } %>
+                    <div class="card-body d-flex flex-column">
+                      <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h5 class="card-title mb-0">
+                          <%= product.name %>
+                        </h5>
+                        <span class="badge bg-light text-dark">
+                          <%= product.category %>
+                        </span>
+                      </div>
+                      <p class="card-text text-muted flex-grow-1">
+                        <%= product.description %>
+                      </p>
+                      <div class="d-flex justify-content-between align-items-center mt-2">
+                        <div class="fw-bold">$<%= product.price %>
+                        </div>
+                        <div class="btn-group">
+                          <a href="/products/<%= product._id %>" class="btn btn-outline-primary btn-sm">View</a>
+                          <a href="/add-cart/<%= product._id %>" class="btn btn-primary btn-sm">Add</a>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+          </div>
+          <% }); %>
+  </div>
+
+  <div class="d-flex justify-content-between align-items-center mt-4 flex-wrap gap-2">
+    <div class="text-muted">Showing page <%= page %> of <%= totalPages %> • <%= totalProducts %> products</div>
+    <nav aria-label="Products pagination">
+      <ul class="pagination mb-0">
+        <li class="page-item <%= page === 1 ? 'disabled' : '' %>">
+          <a class="page-link"
+            href="?page=<%= Math.max(page-1,1) %>&limit=<%= limit %>&category=<%= filters.category %>&minPrice=<%= filters.minPrice %>&maxPrice=<%= filters.maxPrice %>&search=<%= filters.search %>">Prev</a>
+        </li>
+        <% for(let i=1;i<=totalPages;i++){ %>
+          <li class="page-item <%= page === i ? 'active' : '' %>">
+            <a class="page-link"
+              href="?page=<%= i %>&limit=<%= limit %>&category=<%= filters.category %>&minPrice=<%= filters.minPrice %>&maxPrice=<%= filters.maxPrice %>&search=<%= filters.search %>">
+              <%= i %>
+            </a>
+          </li>
+          <% } %>
+            <li class="page-item <%= page === totalPages ? 'disabled' : '' %>">
+              <a class="page-link"
+                href="?page=<%= Math.min(page+1,totalPages) %>&limit=<%= limit %>&category=<%= filters.category %>&minPrice=<%= filters.minPrice %>&maxPrice=<%= filters.maxPrice %>&search=<%= filters.search %>">Next</a>
+            </li>
+      </ul>
+    </nav>
+  </div>
+</section>

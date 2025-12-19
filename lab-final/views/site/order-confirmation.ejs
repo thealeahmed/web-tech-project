@@ -1,0 +1,20 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <div class="card shadow-sm p-5">
+                <h1 class="text-success mb-4">Order Successful!</h1>
+                <p class="lead">Thank you for your purchase. Your order has been placed successfully.</p>
+                <div class="alert alert-info py-4">
+                    <h4 class="mb-0">Order ID: <span class="font-weight-bold">
+                            <%= orderId %>
+                        </span></h4>
+                </div>
+                <p class="text-muted mt-3">We have sent a confirmation email to you. You can track your order using the
+                    ID above.</p>
+                <div class="mt-4">
+                    <a href="/products" class="btn btn-primary btn-lg">Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

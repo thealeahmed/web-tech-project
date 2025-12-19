@@ -1,0 +1,33 @@
+{
+  "name": "sp19-bse-a-mern",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www --ignore admin",
+    "seed:products": "node ./seeds/seedProducts.js",
+    "heroku-postbuild": "cd admin && npm install && npm run build"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
+    "config": "^3.3.6",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.10",
+    "express": "^4.22.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.2",
+    "faker": "^5.5.3",
+    "http-errors": "~1.6.3",
+    "jsonwebtoken": "^9.0.3",
+    "lodash": "^4.17.21",
+    "mongoose": "^9.0.1",
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2",
+    "node-cron": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=16.18.1"
+  }
+}
